@@ -23,7 +23,6 @@ import Footer from "./components/Footer";
 function App() {
   const [isLogin,setIsLogin] = useState(false);
   const [userState, setUserState] = useState(null);
-  
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       setUserState(user);
