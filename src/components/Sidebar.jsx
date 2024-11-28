@@ -8,7 +8,6 @@ const Sidebar = ({children,onIsLogin}) => {
       onIsLogin(false)
       await auth.signOut();
       window.location.href = "/login";
-      console.log("User logged out successfully!");
     } catch (error) {
       console.error("Error logging out:", error.message);
     }
@@ -51,7 +50,6 @@ const Sidebar = ({children,onIsLogin}) => {
     </nav>
 
     <div class="flex flex-col items-center gap-y-4 py-10">
-    <a href="#" class="text-gary-400 group relative rounded-xl p-2 hover:bg-gray-50">
       <button onClick={handleLogout} class="h-6 w-6 stroke-current group-hover:text-blue-600">
         <LogOutIcon />
       </button>
@@ -63,7 +61,6 @@ const Sidebar = ({children,onIsLogin}) => {
             Log Out <span class="text-gray-400">(Y)</span>
           </div>
         </div>
-    </a>
     <a href="/profile" class="text-gary-400 group relative rounded-xl p-2 hover:bg-gray-50">
       <button class="mt-2 rounded-full bg-gray-100 group-hover:text-blue-600">
         <CircleUserRound class="h-10 w-10 rounded-full"/>

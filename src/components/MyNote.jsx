@@ -20,7 +20,7 @@ const MyNote = () => {
       )))
     }
     getNotes()
-  },[notes])
+  },[notes,dbref])
 
   const updateUser = async (updatedData) => {
     const userDoc = doc(db,"Notes",updatedData.id)
