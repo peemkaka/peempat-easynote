@@ -7,7 +7,7 @@ const MyNote = () => {
   const dbref = collection(db, "Notes")
   const [notes,setNotes] = useState(null);
   const [currentPage,setCurrentPage] = useState(1);
-  const [notesPerPage, setNotesPerPage] = useState(3);
+  const notesPerPage = 3;
   
   useEffect(()=>{
     const getNotes = async ()=>{
